@@ -57,6 +57,13 @@ body {
   display: inline-block;
 }
 .auth0-banner .logo {
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+  text-align: center;
+  width: 100%;
+}
+.auth0-banner .logo:after {
   content: "";
   display: inline-block;
   background-image: url("../img/logo-sm.png");
@@ -64,8 +71,6 @@ body {
   background-repeat: no-repeat;
   height: 1.5em;
   width: 4em;
-  margin-left: -0.1em;
-  margin-top: 1.2em;
 }
 .auth0-banner.clone {
   font-size: calc(16px * 2);
