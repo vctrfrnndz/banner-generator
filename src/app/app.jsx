@@ -16,6 +16,13 @@ var BannersCollection = [
     "width": 728,
     "height": 90,
     "cssClass": "auth0-banner horizontal"
+  },
+  {
+    "id": 2,
+    "name": "StackOverflow Vertical",
+    "width": 220,
+    "height": 250,
+    "cssClass": "auth0-banner square stackoverflow"
   }
 ];
 
