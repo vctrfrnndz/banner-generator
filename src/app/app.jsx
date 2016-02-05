@@ -8,21 +8,35 @@ var BannersCollection = [
     "name": "Auth0 Square",
     "width": 300,
     "height": 250,
-    "cssClass": "auth0-banner square"
+    "cssClass": "a0-banner-default square"
   },
   {
     "id": 1,
     "name": "Auth0 Horizontal",
     "width": 728,
     "height": 90,
-    "cssClass": "auth0-banner horizontal"
+    "cssClass": "a0-banner-default horizontal"
   },
   {
     "id": 2,
     "name": "StackOverflow Vertical",
     "width": 220,
     "height": 250,
-    "cssClass": "auth0-banner square stackoverflow"
+    "cssClass": "a0-banner-default square stackoverflow"
+  },
+  {
+    "id": 3,
+    "name": "AuthTips Twitter Card",
+    "width": 458,
+    "height": 230,
+    "cssClass": "a0-tips"
+  },
+  {
+    "id": 4,
+    "name": "AuthTips Twitter Card (Static)",
+    "width": 458,
+    "height": 230,
+    "cssClass": "a0-tips static"
   }
 ];
 
@@ -89,7 +103,7 @@ var Banner = React.createClass({
   render: function () {
     return (
       <div className="stage">
-        <div style={this.getStyles(1)} className={this.props.config.cssClass + ' auth0-banner'}>
+        <div style={this.getStyles(1)} className={this.props.config.cssClass + ' a0-banner-base'}>
           <div className="center">
             <ContentEditable name="copy" ref="copy" className="copy" html={this.state.copy} onChange={this.handleChange} />
             <ContentEditable name="cta" ref="cta" className="btn btn-success btn-md" html={this.state.cta} onChange={this.handleChange} />
@@ -98,7 +112,7 @@ var Banner = React.createClass({
           </div>
         </div>
         <div className="clone-wrapper">
-          <div ref="clone" style={this.getStyles(2)} className={this.props.config.cssClass + ' auth0-banner clone'}>
+          <div ref="clone" style={this.getStyles(2)} className={this.props.config.cssClass + ' a0-banner-base clone'}>
             <div
               spellCheck="false"
               className="copy"
@@ -162,7 +176,7 @@ var Index = React.createClass({
     };
 
     var templateItem = function(item) {
-      return <option value={item.id}>{item.name} ({item.width}x{item.height})</option>;
+      return <option key={item.id} value={item.id}>{item.name} ({item.width}x{item.height})</option>;
     };
 
     return (

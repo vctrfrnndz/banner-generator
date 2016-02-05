@@ -1,6 +1,15 @@
+@import 'banners/default'
+@import 'banners/authtips'
+
 body
   -webkit-font-smoothing: subpixel-antialiased;
   text-align: center;
+
+[contentEditable]
+  outline: none;
+  -webkit-user-select: text;
+  user-select: text;
+  border-radius: 3px;
 
 .btn
   .icon
@@ -17,42 +26,37 @@ body
   padding: 40px;
   padding-top: 20px;
 
-.auth0-banner
+.a0-banner-base.clone
+  font-size: calc(16px * 2);
+
+  .btn
+    border-radius: 6px;
+
+.a0-banner-base
   font-size: 16px;
-  background: #F5F5F5;
+  background: gray;
   outline: none;
   text-align: center;
   padding: 1.5em;
-  background-size: 130%;
-  background-position: center center;
   cursor: default !important;
-  color: #5C666F;
-  background-image: url('../img/wave.png');
-  background-position: center center;
   position: relative;
   margin: 0 auto;
 
-  [contentEditable]
-    outline: none;
-    -webkit-user-select: text;
-    user-select: text;
-    border-radius: 3px;
-
-    &:focus
-      opacity: 0.8;
+  &:focus
+    opacity: 0.8;
 
   .copy
     padding-top: 1em;
     font-size: 1em;
     line-height: 1.6;
-    font-weight: 200;
+    font-weight: normal;
     margin-bottom: 1.1em;
     display: inline-block;
 
   .btn.btn-success
     outline: none;
-    background-color: #eb5424 !important;
     cursor: default !important;
+    background-color: #eb5424 !important;
     padding: 0.8em 1.5em;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -64,6 +68,7 @@ body
     left: 0;
     text-align: center;
     width: 100%;
+
     &:after
       content: "";
       display: inline-block;
@@ -72,31 +77,3 @@ body
       background-repeat: no-repeat;
       height: 1.5em;
       width: 4em;
-
-
-.auth0-banner
-  &.clone
-    font-size: calc(16px * 2);
-
-    .btn
-      border-radius: 6px;
-
-  &.horizontal
-    padding: 0;
-
-    .copy
-      margin: 0;
-      padding-top: 1.3em;
-
-    .btn
-      position: absolute;
-      right: 1.5em;
-      top: 2em;
-
-    .logo
-      position: absolute;
-      top: 2.2em;
-      left: 2em;
-      margin: 0;
-      width: 5em;
-      height: 2em;

@@ -1,6 +1,67 @@
+.a0-banner-base.a0-banner-default {
+  background: #f5f5f5;
+  background-size: 130%;
+  background-position: center center;
+  color: #5c666f;
+  background-image: url("../img/wave.png");
+  background-position: center center;
+}
+.a0-banner-base.a0-banner-default.horizontal {
+  padding: 0;
+}
+.a0-banner-base.a0-banner-default.horizontal .copy {
+  margin: 0;
+  padding-top: 1.3em;
+}
+.a0-banner-base.a0-banner-default.horizontal .btn {
+  position: absolute;
+  right: 1.5em;
+  top: 2em;
+}
+.a0-banner-base.a0-banner-default.horizontal .logo {
+  position: absolute;
+  top: 2.2em;
+  left: 2em;
+  margin: 0;
+  width: 5em;
+  height: 2em;
+}
+.a0-banner-base.a0-tips {
+  background: url("../img/tips.png") center center no-repeat;
+  background-size: 100%;
+  color: #fff;
+}
+.a0-banner-base.a0-tips .copy {
+  margin: 0;
+  padding: 2.5em 1.8em;
+  padding-bottom: 3.2em;
+  font-size: 0.8em;
+  width: 100%;
+  height: 11em;
+  border-radius: 0.3em;
+}
+.a0-banner-base.a0-tips .copy p {
+  margin: 0;
+}
+.a0-banner-base.a0-tips .logo,
+.a0-banner-base.a0-tips .btn {
+  display: none;
+}
+.a0-banner-base.a0-tips.static {
+  background-image: url("../img/tips-static.png");
+}
+.a0-banner-base.a0-tips.static .copy {
+  display: none;
+}
 body {
   -webkit-font-smoothing: subpixel-antialiased;
   text-align: center;
+}
+[contentEditable] {
+  outline: none;
+  -webkit-user-select: text;
+  user-select: text;
+  border-radius: 3px;
 }
 .btn .icon {
   position: relative;
@@ -16,55 +77,50 @@ body {
   padding: 40px;
   padding-top: 20px;
 }
-.auth0-banner {
+.a0-banner-base.clone {
+  font-size: calc(16px * 2);
+}
+.a0-banner-base.clone .btn {
+  border-radius: 6px;
+}
+.a0-banner-base {
   font-size: 16px;
-  background: #f5f5f5;
+  background: #808080;
   outline: none;
   text-align: center;
   padding: 1.5em;
-  background-size: 130%;
-  background-position: center center;
   cursor: default !important;
-  color: #5c666f;
-  background-image: url("../img/wave.png");
-  background-position: center center;
   position: relative;
   margin: 0 auto;
 }
-.auth0-banner [contentEditable] {
-  outline: none;
-  -webkit-user-select: text;
-  user-select: text;
-  border-radius: 3px;
-}
-.auth0-banner [contentEditable]:focus {
+.a0-banner-base:focus {
   opacity: 0.8;
 }
-.auth0-banner .copy {
+.a0-banner-base .copy {
   padding-top: 1em;
   font-size: 1em;
   line-height: 1.6;
-  font-weight: 200;
+  font-weight: normal;
   margin-bottom: 1.1em;
   display: inline-block;
 }
-.auth0-banner .btn.btn-success {
+.a0-banner-base .btn.btn-success {
   outline: none;
-  background-color: #eb5424 !important;
   cursor: default !important;
+  background-color: #eb5424 !important;
   padding: 0.8em 1.5em;
   font-size: 0.8em;
   text-transform: uppercase;
   display: inline-block;
 }
-.auth0-banner .logo {
+.a0-banner-base .logo {
   position: absolute;
   bottom: 1.5em;
   left: 0;
   text-align: center;
   width: 100%;
 }
-.auth0-banner .logo:after {
+.a0-banner-base .logo:after {
   content: "";
   display: inline-block;
   background-image: url("../img/logo-sm.png");
@@ -73,25 +129,56 @@ body {
   height: 1.5em;
   width: 4em;
 }
-.auth0-banner.clone {
-  font-size: calc(16px * 2);
+
+.a0-banner-base.a0-tips {
+  background: url("../img/tips.png") center center no-repeat;
+  background-size: 100%;
+  color: #fff;
 }
-.auth0-banner.clone .btn {
-  border-radius: 6px;
+.a0-banner-base.a0-tips .copy {
+  margin: 0;
+  padding: 2.5em 1.8em;
+  padding-bottom: 3.2em;
+  font-size: 0.8em;
+  width: 100%;
+  height: 11em;
+  border-radius: 0.3em;
 }
-.auth0-banner.horizontal {
+.a0-banner-base.a0-tips .copy p {
+  margin: 0;
+}
+.a0-banner-base.a0-tips .logo,
+.a0-banner-base.a0-tips .btn {
+  display: none;
+}
+.a0-banner-base.a0-tips.static {
+  background-image: url("../img/tips-static.png");
+}
+.a0-banner-base.a0-tips.static .copy {
+  display: none;
+}
+
+.a0-banner-base.a0-banner-default {
+  background: #f5f5f5;
+  background-size: 130%;
+  background-position: center center;
+  color: #5c666f;
+  background-image: url("../img/wave.png");
+  background-position: center center;
+}
+.a0-banner-base.a0-banner-default.horizontal {
   padding: 0;
 }
-.auth0-banner.horizontal .copy {
+.a0-banner-base.a0-banner-default.horizontal .copy {
   margin: 0;
   padding-top: 1.3em;
 }
-.auth0-banner.horizontal .btn {
+.a0-banner-base.a0-banner-default.horizontal .btn {
   position: absolute;
   right: 1.5em;
   top: 2em;
 }
-.auth0-banner.horizontal .logo {
+.a0-banner-base.a0-banner-default.horizontal .logo {
   position: absolute;
   top: 2.2em;
   left: 2em;
