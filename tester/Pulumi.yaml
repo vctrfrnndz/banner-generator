@@ -1,0 +1,7 @@
+name: tester
+description: A TypeScript program to deploy a static website on AWS
+runtime: nodejs
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: static-website-aws-typescript

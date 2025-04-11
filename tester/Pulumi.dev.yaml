@@ -1,0 +1,8 @@
+config:
+  aws:region: us-west-2
+  pulumi:template: static-website-aws-typescript
+  tester:errorDocument: error.html
+  tester:indexDocument: index.html
+  tester:path: ./www
+environment:
+  - first-project/first-environment
