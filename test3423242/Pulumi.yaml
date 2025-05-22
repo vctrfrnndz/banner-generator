@@ -1,0 +1,7 @@
+name: noble-cerium-numbat
+description: A minimal Aiven Go Pulumi program
+runtime: go
+config:
+  pulumi:tags:
+    value:
+      pulumi:template: aiven-go
